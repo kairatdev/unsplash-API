@@ -1,0 +1,121 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: rgb(79, 75, 72);
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin: 100px auto 50px;
+    font-weight: 600;
+    color: bisque;
+}
+
+form {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    height: 80px;
+    background: #434989;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid gold;
+}
+
+form input {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 30px;
+}
+
+form button {
+    padding: 0 40px;
+    height: 100%;
+    background: rgb(71, 141, 255);
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    border-radius: 0 5px 5px 0px;
+    cursor: pointer;
+}
+
+::placeholder {
+    font-size: 18px;
+}
+
+#show-more-btn {
+    background: rgb(30, 29, 73);
+    color: gold;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 10px auto 100px;
+    cursor: pointer;
+    display: block;
+    display: none;
+    height: 50px;
+}
+
+.res {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 60px;
+    margin: 0px;
+}
+
+.res img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.res img:hover {
+    transform: scale(1.1);
+}
+
+/* Медиа-запросы для адаптивности */
+
+@media only screen and (max-width: 768px) {
+    /* Для устройств с шириной экрана до 768px */
+    h1 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    form {
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form input {
+        padding: 15px 20px;
+        margin-bottom: 10px;
+    }
+
+    form button {
+        padding: 15px 20px;
+    }
+
+    .res {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        padding: 30px;
+    }
+}
+
+
+
